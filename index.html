@@ -294,12 +294,11 @@ html, body {
     Your email:
     <input type="email" name="email">
   </label><br>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label><br>
+  <label> Quantité 
+  <select name="selection"id='some_select'></select>  </label> 
   <!-- your other form fields go here -->
   <button type="submit">Send</button>
+
 </form>     
         </div>
 
@@ -312,6 +311,11 @@ html, body {
     <script src="script.js" charset="utf-8"></script>
   </body>
   <script>
+        var select = '';
+    for (i=1;i<=15;i++){
+        select += '<option val=' + i + '>' + i + '</option>';
+    }
+    $('#some_select').html(select);
   $(document).ready(function() {
 
   $('.color-choose input').on('click', function() {
